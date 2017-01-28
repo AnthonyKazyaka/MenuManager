@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner", "MenuPlanner\MenuPlanner.csproj", "{640C7FA7-D531-4020-A617-1844DA49D5D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner.Common", "MenuPlanner.Common\MenuPlanner.Common.csproj", "{B9BEFCC5-1EA8-49B9-BA82-6C8A530739C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuPlanner.Repository", "MenuPlanner.Repository\MenuPlanner.Repository.csproj", "{785C8EB0-C96F-4E26-BF49-64A2D75A4978}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{640C7FA7-D531-4020-A617-1844DA49D5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{640C7FA7-D531-4020-A617-1844DA49D5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{640C7FA7-D531-4020-A617-1844DA49D5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{640C7FA7-D531-4020-A617-1844DA49D5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BEFCC5-1EA8-49B9-BA82-6C8A530739C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BEFCC5-1EA8-49B9-BA82-6C8A530739C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BEFCC5-1EA8-49B9-BA82-6C8A530739C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BEFCC5-1EA8-49B9-BA82-6C8A530739C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785C8EB0-C96F-4E26-BF49-64A2D75A4978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785C8EB0-C96F-4E26-BF49-64A2D75A4978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785C8EB0-C96F-4E26-BF49-64A2D75A4978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785C8EB0-C96F-4E26-BF49-64A2D75A4978}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
