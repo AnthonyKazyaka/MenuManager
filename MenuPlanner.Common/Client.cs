@@ -4,6 +4,8 @@
 
     public class Client : Person
     {
-        public List<Person> AdditionalContact { get; set; }
+        public List<Person> AdditionalContacts { get; set; }
+
+        public LocationInformation LocationInformation { get; set; }
     }
 }

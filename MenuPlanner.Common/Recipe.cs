@@ -4,12 +4,14 @@
 
     public class Recipe
     {
-        public string Name { get; }
+        public string Name { get; set; }
+
+        public RecipeSource Source { get; set; }
 
         public List<Ingredient> Ingredients { get; set; }
 
-        public Dictionary<int, string> CookingInstructions { get; set; }
+        public string CookingInstructions { get; set; }
 
-        public Dictionary<int, string> ReheatingInstructions { get; set; }
+        public string ReheatingInstructions { get; set; }
     }
 }
