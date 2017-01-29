@@ -41,8 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuPlannerSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\BaseSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\EmployeeSqlRepository.cs" />
+    <Compile Include="IMenuPlannerRepository.cs" />
+    <Compile Include="Sql\Repositories\ClientSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\EventSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\EventTypeSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\IngredientSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\JobTypeSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\MenuSqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\Repositories\RecipeSourceSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\RecipeSourceTypeSqlRepository.cs" />
+    <Compile Include="Sql\Repositories\RecipeSqlRepository.cs" />
+    <Compile Include="Sql\Models\SqlClient.cs" />
+    <Compile Include="Sql\Models\SqlClientAdditionalContact.cs" />
+    <Compile Include="Sql\Models\SqlEmployee.cs" />
+    <Compile Include="Sql\Models\SqlEvent.cs" />
+    <Compile Include="Sql\Models\SqlEventEmployee.cs" />
+    <Compile Include="Sql\Models\SqlEventType.cs" />
+    <Compile Include="Sql\Models\SqlIngredient.cs" />
+    <Compile Include="Sql\Models\SqlJobType.cs" />
+    <Compile Include="Sql\Models\SqlMenu.cs" />
+    <Compile Include="Sql\Models\SqlRecipe.cs" />
+    <Compile Include="Sql\Models\SqlRecipeSourceType.cs" />
+    <Compile Include="Sql\Models\SqlShoppingLocation.cs" />
+    <Compile Include="Sql\Repositories\ShoppingLocationRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -55,6 +79,7 @@
       <Name>MenuPlanner.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

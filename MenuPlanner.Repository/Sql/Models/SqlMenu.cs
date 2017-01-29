@@ -1,13 +1,13 @@
-﻿namespace MenuPlanner.Common
+﻿namespace MenuPlanner.Repository.Sql.Models
 {
     using System.Collections.Generic;
 
-    public class Menu
+    public class SqlMenu
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public List<Recipe> Recipes { get; set; }
+        public List<int> Recipes { get; set; }
     }
 }

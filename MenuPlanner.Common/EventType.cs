@@ -1,11 +1,9 @@
 ﻿namespace MenuPlanner.Common
 {
-    public class ShoppingLocation
+    public class EventType
     {
         public int Id { get; set; }
 
         public string Name { get; set; }
-
-        public LocationInformation LocationInformation { get; set; }
     }
 }

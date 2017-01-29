@@ -1,135 +1,142 @@
-﻿go
-
-use MenuPlannerDb.sdf
-
-go
-
-begin transaction
-
-begin try
-
-if exists (select 1 from information_schema.tables where table_name = 'Clients') begin
-	alter table ClientAdditionalContacts drop constraint --
-	drop table Clients;
-	print 'Dropped table Clients.'
-end
-
-create table Clients (
+﻿create table Clients (
 	Id int not null identity(1, 1),
-	FirstName varchar(50) not null,
-	LastName varchar(50) not null,
-	PhoneNumber varchar(11),
-	EmailAddress varchar(100),
-	Address varchar(100),
-	City varchar(50),
-	State varchar(25),
-	Zip varchar(5),
+	FirstName nvarchar(50) not null,
+	LastName nvarchar(50) not null,
+	PhoneNumber nvarchar(11),
+	EmailAddress nvarchar(100),
+	Address nvarchar(100),
+	City nvarchar(50),
+	State nvarchar(2),
+	Zip nvarchar(5),
 	primary key (Id)
 )
 
-print 'Created table Clients.'
-
-if exists (select 1 from information_schema.tables where table_name = 'ClientAdditionalContacts') begin
-	alter table ClientAdditionalContacts drop constraint --
-	drop table ClientAdditionalContacts;
-	print 'Dropped table ClientAdditionalContacts'
-end
+go
 
 create table ClientAdditionalContacts (
 	Id int not null identity(1, 1),
 	ClientId int not null references Clients(Id),
-	FirstName varchar(50) not null,
-	LastName varchar(50) not null,
-	PhoneNumber varchar(11),
-	EmailAddress varchar(100),
+	FirstName nvarchar(50) not null,
+	LastName nvarchar(50) not null,
+	PhoneNumber nvarchar(11),
+	EmailAddress nvarchar(100),
 	primary key (Id)
 )
 
-print 'Created table ClientAdditionalContacts'
-
-if exists (select 1 from information_schema.tables where table_name = 'Ingredients') begin
-	drop table Ingredients
-	print 'Dropped table Ingredients.'
-end
+go
 
 create table Ingredients (
 	Id int not null identity(1, 1),
-	Name varchar(100) not null,
+	Name nvarchar(100) not null,
 	primary key (Id)
 )
 
-print 'Created table Ingredients.'
-
-if exists (select 1 from information_schema.tables where table_name = 'RecipeSourceTypes') begin
-	alter table RecipeSourceTypes drop constraint --
-	drop table RecipeSourceTypes
-	print 'Dropped table RecipeSourceTypes.'
-end
+go
 
 create table RecipeSourceTypes (
 	Id int not null identity(1, 1),
-	Name varchar(50),
+	Name nvarchar(50),
 	primary key (Id)
 )
 
-print 'Created table RecipeSourceTypes.'
-
-if exists (select 1 from information_schema.tables where table_name = 'Recipes') begin
-	alter table Recipes drop constraint --
-	drop table Recipes
-	print 'Dropped table Recipes.'
-end
+go
 
 create table Recipes (
 	Id int not null identity(1, 1),
-	Name varchar(100) not null,
-	SourceName varchar(100),
-	SourceDescription varchar(500),
+	Name nvarchar(100) not null,
+	SourceName nvarchar(100),
+	SourceDescription nvarchar(500),
 	SourceTypeId int references RecipeSourceTypes(Id),
-	SourceWebsite varchar(250),
-	CookingInstructions varchar(500),
-	ReheatingInstructions varchar(500),
+	SourceWebsite nvarchar(250),
+	CookingInstructions nvarchar(500),
+	ReheatingInstructions nvarchar(500),
 	primary key (Id)
 )
 
-print 'Created table Recipes.'
-
-if exists (select 1 from information_schema.tables where table_name = 'ShoppingLocations') begin
-	drop table ShoppingLocations
-	print 'Dropped table ShoppingLocations.'
-end
+go
 
 create table ShoppingLocations (
 	Id int not null identity(1, 1),
-	Name varchar(100) not null,
-	Address varchar(100),
-	City varchar(50),
-	State varchar(25),
-	Zip varchar(5),
+	Name nvarchar(100) not null,
+	Address nvarchar(100),
+	City nvarchar(50),
+	State nvarchar(2),
+	Zip nvarchar(5),
 	primary key (Id)
 )
 
-print 'Created table ShoppingLocations.'
+go
 
-end try
+create table Menus (
+	Id int not null identity(1, 1),
+	Name nvarchar(100) not null,
+	primary key (Id)
+)
 
-begin catch
+go
 
-print 'Failed to create database.  Rolling back transaction...'
+create table MenuRecipes (
+	MenuId int not null references Menus(Id),
+	RecipeId int not null references Recipes(Id),
+	primary key (MenuId, RecipeId)
+)
 
-if @@TRANCOUNT > 0
-	rollback transaction
-	print 'Transaction rolled back.'
-	
-	
+go
 
-end catch
+create table JobTypes (
+	Id int not null identity(1, 1),
+	Name nvarchar(100) not null,
+	primary key (Id)
+)
 
-print 'Finished initializing MenuPlannerDb.  Committing transaction.'
+go
 
-if @@TRANCOUNT > 0 begin
-	commit transaction
-	print 'Transaction committed.'
-end
+create table Employees (
+	Id int not null identity(1, 1),
+	FirstName nvarchar(50) not null,
+	LastName nvarchar(50) not null,
+	PhoneNumber nvarchar(11),
+	EmailAddress nvarchar(100),
+	Address nvarchar(100),
+	City nvarchar(50),
+	State nvarchar(2),
+	Zip nvarchar(5),
+	Title nvarchar(100),
+	JobTypeId int references JobTypes(Id),
+	primary key (Id)
+)
+
+go
+
+create table EventTypes (
+	Id int not null identity(1, 1),
+	Name nvarchar(100) not null,
+	primary key (Id)
+)
+
+go
+
+create table Events (
+	Id int not null identity(1, 1),
+	Name nvarchar(100) not null,
+	EventTypeId int references EventTypes(Id),
+	ClientId int references Clients(Id),
+	Address nvarchar(100),
+	City nvarchar(50),
+	State nvarchar(2),
+	Zip nvarchar(5),
+	MenuId int references Menus(Id),
+	StartTime datetime,
+	EndTime datetime,
+	primary key (Id)
+)
+
+go
+
+create table EventEmployees (
+	EventId int not null references Events(Id),
+	EmployeeId int not null references Employees(Id),
+	primary key (EventId, EmployeeId)
+)
 
 go
