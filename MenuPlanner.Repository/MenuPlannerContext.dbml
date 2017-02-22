@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MenuPlanner" Class="MenuPlannerContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.ClientAdditionalContacts" Member="ClientAdditionalContacts">
+    <Type Name="ClientAdditionalContact">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="Client_ClientAdditionalContact" Member="Client" ThisKey="ClientId" OtherKey="Id" Type="Client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShoppingLocations" Member="ShoppingLocations">
+    <Type Name="ShoppingLocation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clients" Member="Clients">
+    <Type Name="Client">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Association Name="Client_ClientAdditionalContact" Member="ClientAdditionalContacts" ThisKey="Id" OtherKey="ClientId" Type="ClientAdditionalContact" />
+      <Association Name="Client_Event" Member="Events" ThisKey="Id" OtherKey="ClientId" Type="Event" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employees" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="JobTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Employee_EventEmployee" Member="EventEmployees" ThisKey="Id" OtherKey="EmployeeId" Type="EventEmployee" />
+      <Association Name="JobType_Employee" Member="JobType" ThisKey="JobTypeId" OtherKey="Id" Type="JobType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventEmployees" Member="EventEmployees">
+    <Type Name="EventEmployee">
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Employee_EventEmployee" Member="Employee" ThisKey="EmployeeId" OtherKey="Id" Type="Employee" IsForeignKey="true" />
+      <Association Name="Event_EventEmployee" Member="Event" ThisKey="EventId" OtherKey="Id" Type="Event" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EventTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="MenuId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Event_EventEmployee" Member="EventEmployees" ThisKey="Id" OtherKey="EventId" Type="EventEmployee" />
+      <Association Name="Client_Event" Member="Client" ThisKey="ClientId" OtherKey="Id" Type="Client" IsForeignKey="true" />
+      <Association Name="EventType_Event" Member="EventType" ThisKey="EventTypeId" OtherKey="Id" Type="EventType" IsForeignKey="true" />
+      <Association Name="Menus_Event" Member="Menu" ThisKey="MenuId" OtherKey="Id" Type="Menu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventTypes" Member="EventTypes">
+    <Type Name="EventType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="EventType_Event" Member="Events" ThisKey="Id" OtherKey="EventTypeId" Type="Event" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ingredients" Member="Ingredients">
+    <Type Name="Ingredient">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JobTypes" Member="JobTypes">
+    <Type Name="JobType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="JobType_Employee" Member="Employees" ThisKey="Id" OtherKey="JobTypeId" Type="Employee" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MenuRecipes" Member="MenuRecipes">
+    <Type Name="MenuRecipe">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RecipeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Menus_MenuRecipe" Member="Menu" ThisKey="MenuId" OtherKey="Id" Type="Menu" IsForeignKey="true" />
+      <Association Name="Recipe_MenuRecipe" Member="Recipe" ThisKey="RecipeId" OtherKey="Id" Type="Recipe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Menus" Member="Menus">
+    <Type Name="Menu">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Menus_Event" Member="Events" ThisKey="Id" OtherKey="MenuId" Type="Event" />
+      <Association Name="Menus_MenuRecipe" Member="MenuRecipes" ThisKey="Id" OtherKey="MenuId" Type="MenuRecipe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Recipes" Member="Recipes">
+    <Type Name="Recipe">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SourceDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SourceTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SourceWebsite" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CookingInstructions" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ReheatingInstructions" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Recipe_MenuRecipe" Member="MenuRecipes" ThisKey="Id" OtherKey="RecipeId" Type="MenuRecipe" />
+      <Association Name="RecipeSourceType_Recipe" Member="RecipeSourceType" ThisKey="SourceTypeId" OtherKey="Id" Type="RecipeSourceType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecipeSourceTypes" Member="RecipeSourceTypes">
+    <Type Name="RecipeSourceType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RecipeSourceType_Recipe" Member="Recipes" ThisKey="Id" OtherKey="SourceTypeId" Type="Recipe" />
+    </Type>
+  </Table>
+</Database>

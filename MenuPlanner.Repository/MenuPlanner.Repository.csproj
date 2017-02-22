@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,36 +42,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sql\Repositories\BaseSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\EmployeeSqlRepository.cs" />
+    <Compile Include="MenuPlannerContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuPlannerContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPlannerDataContext.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSqlRepository.cs" />
+    <Compile Include="EmployeeSqlRepository.cs" />
     <Compile Include="IMenuPlannerRepository.cs" />
-    <Compile Include="Sql\Repositories\ClientSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\EventSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\EventTypeSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\IngredientSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\JobTypeSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\MenuSqlRepository.cs" />
+    <Compile Include="ClientSqlRepository.cs" />
+    <Compile Include="EventSqlRepository.cs" />
+    <Compile Include="EventTypeSqlRepository.cs" />
+    <Compile Include="IngredientSqlRepository.cs" />
+    <Compile Include="JobTypeSqlRepository.cs" />
+    <Compile Include="MenuSqlRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\Repositories\RecipeSourceSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\RecipeSourceTypeSqlRepository.cs" />
-    <Compile Include="Sql\Repositories\RecipeSqlRepository.cs" />
-    <Compile Include="Sql\Models\SqlClient.cs" />
-    <Compile Include="Sql\Models\SqlClientAdditionalContact.cs" />
-    <Compile Include="Sql\Models\SqlEmployee.cs" />
-    <Compile Include="Sql\Models\SqlEvent.cs" />
-    <Compile Include="Sql\Models\SqlEventEmployee.cs" />
-    <Compile Include="Sql\Models\SqlEventType.cs" />
-    <Compile Include="Sql\Models\SqlIngredient.cs" />
-    <Compile Include="Sql\Models\SqlJobType.cs" />
-    <Compile Include="Sql\Models\SqlMenu.cs" />
-    <Compile Include="Sql\Models\SqlRecipe.cs" />
-    <Compile Include="Sql\Models\SqlRecipeSourceType.cs" />
-    <Compile Include="Sql\Models\SqlShoppingLocation.cs" />
-    <Compile Include="Sql\Repositories\ShoppingLocationRepository.cs" />
+    <Compile Include="RecipeSourceTypeSqlRepository.cs" />
+    <Compile Include="RecipeSqlRepository.cs" />
+    <Compile Include="ShoppingLocationRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="MenuPlannerContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MenuPlannerContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -79,7 +87,14 @@
       <Name>MenuPlanner.Common</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MenuPlannerContext.dbml.layout">
+      <DependentUpon>MenuPlannerContext.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

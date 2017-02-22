@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.125" name="MenuPlannerContext">
+  <DataContextMoniker Name="/MenuPlannerContext" />
+  <nestedChildShapes>
+    <classShape Id="ac459830-0704-4fed-bb20-b58ffe59d9c0" absoluteBounds="3.5, 7.375, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MenuPlannerContext/ClientAdditionalContact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8dda2ab3-ff8a-4db7-a044-2a78e23e0930" absoluteBounds="3.515, 7.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8c03e3d7-3e88-474a-b924-f086fb29487f" absoluteBounds="6.75, 4.5, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MenuPlannerContext/ShoppingLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c79fa502-362d-4774-9abf-2d45da319234" absoluteBounds="6.765, 4.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d333abaf-a8e9-4953-b310-e471ef99f0c1" absoluteBounds="0.75, 7.125, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/MenuPlannerContext/Client" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2722bf7-d40e-4934-aa92-eb907bfd27fc" absoluteBounds="0.765, 7.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ac59dc0e-d9c2-448b-a91f-c96645b38245" absoluteBounds="3.5, 10.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/MenuPlannerContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4245eafd-7a28-411b-86a1-cb560591c1fa" absoluteBounds="3.515, 11.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9574878a-ee98-4880-9994-e5445a72a8ac" absoluteBounds="6.25, 1.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MenuPlannerContext/EventEmployee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4100f4f-5d8d-4756-a3f0-3584ade60838" absoluteBounds="6.265, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cbc790c-4ae1-4dd0-88d1-3e673db4e7d4" absoluteBounds="3.5, 0.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/MenuPlannerContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0a1c88f-fba7-4517-a7f8-f63719d4b065" absoluteBounds="3.515, 1.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bfd1404-4549-469a-9fce-8298ecbb2456" absoluteBounds="0.75, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/MenuPlannerContext/EventType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5233bd02-3762-4d32-9455-69f220bc2d8a" absoluteBounds="0.765, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="876e5389-a9c3-4e5f-bc74-28304929bf8d" absoluteBounds="6.75, 7.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MenuPlannerContext/Ingredient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d48fcff5-2ddf-4dc7-8d94-65d121452d78" absoluteBounds="6.765, 7.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d8183416-3aed-4836-b13b-5cf71da721c5" absoluteBounds="0.75, 11.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MenuPlannerContext/JobType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2199dd5-75ae-4fc1-9de2-c3482ba013a0" absoluteBounds="0.765, 12.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="022d5d32-501a-4c53-bc70-7a339c1e4dd9" absoluteBounds="3.5, 4.625, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/MenuPlannerContext/MenuRecipe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="43bc0152-01d8-4730-b5de-1d4ad7070473" absoluteBounds="3.515, 5.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="362b6879-5eda-404e-ae71-a6f732e551c0" absoluteBounds="0.75, 4.625, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/MenuPlannerContext/Menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7af331f4-58b5-4ca9-856a-0c7b4f4c7b33" absoluteBounds="0.765, 5.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4e605fe-1de4-4c0a-ab39-0e23325d7324" absoluteBounds="0.75, 14, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/MenuPlannerContext/Recipe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d44c11aa-f9bc-4649-967a-af335f4fd707" absoluteBounds="0.765, 14.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9c9e7bd-9347-43ae-9ecc-573bc93e5c55" absoluteBounds="1.5, 17.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/MenuPlannerContext/RecipeSourceType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b24c52f9-52b7-48b3-ae57-54307d6e9361" absoluteBounds="1.5150000000000001, 18.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 8.35659912109375); (3.22916666666667 : 8.35659912109375 : JumpStart); (3.39583333333333 : 8.35659912109375 : JumpEnd); (3.5 : 8.35659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Client/Client_ClientAdditionalContact" />
+      <nodes>
+        <classShapeMoniker Id="d333abaf-a8e9-4953-b310-e471ef99f0c1" />
+        <classShapeMoniker Id="ac459830-0704-4fed-bb20-b58ffe59d9c0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 12.3373527018229); (6.46875 : 12.3373527018229); (6.46875 : 2.81899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Employee/Employee_EventEmployee" />
+      <nodes>
+        <classShapeMoniker Id="ac59dc0e-d9c2-448b-a91f-c96645b38245" />
+        <classShapeMoniker Id="9574878a-ee98-4880-9994-e5445a72a8ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.22199625651042); (6.25 : 2.22199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Event/Event_EventEmployee" />
+      <nodes>
+        <classShapeMoniker Id="0cbc790c-4ae1-4dd0-88d1-3e673db4e7d4" />
+        <classShapeMoniker Id="9574878a-ee98-4880-9994-e5445a72a8ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.12653746153846); (3.125 : 6.75153746153846); (3.125 : 2.21235270182292); (3.19791666666667 : 2.21235270182292 : JumpStart); (3.36458333333333 : 2.21235270182292 : JumpEnd); (3.5 : 2.21235270182292)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Client/Client_Event" />
+      <nodes>
+        <classShapeMoniker Id="d333abaf-a8e9-4953-b310-e471ef99f0c1" />
+        <classShapeMoniker Id="0cbc790c-4ae1-4dd0-88d1-3e673db4e7d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.82817260742187); (3.04166666666667 : 2.82817260742187 : JumpStart); (3.36458333333333 : 2.82817260742187 : JumpEnd); (3.5 : 2.82817260742187)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/EventType/EventType_Event" />
+      <nodes>
+        <classShapeMoniker Id="3bfd1404-4549-469a-9fce-8298ecbb2456" />
+        <classShapeMoniker Id="0cbc790c-4ae1-4dd0-88d1-3e673db4e7d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 12.3469962565104); (3.22916666666667 : 12.3469962565104 : JumpStart); (3.39583333333333 : 12.3469962565104 : JumpEnd); (3.5 : 12.3469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/JobType/JobType_Employee" />
+      <nodes>
+        <classShapeMoniker Id="d8183416-3aed-4836-b13b-5cf71da721c5" />
+        <classShapeMoniker Id="ac59dc0e-d9c2-448b-a91f-c96645b38245" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.65714495227364); (3.06607443490112 : 4.34107051737252 : JumpStart); (3.18392556509888 : 4.22321938717476 : JumpEnd); (3.28125 : 4.12589495227364); (3.28125 : 1.44992435091146); (3.5 : 1.44992435091146)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Menu/Menus_Event" />
+      <nodes>
+        <classShapeMoniker Id="362b6879-5eda-404e-ae71-a6f732e551c0" />
+        <classShapeMoniker Id="0cbc790c-4ae1-4dd0-88d1-3e673db4e7d4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.26932123264723); (3.04166666666667 : 5.26932123264723 : JumpStart); (3.20833333333333 : 5.26932123264723 : JumpEnd); (3.22916666666667 : 5.26932123264723 : JumpStart); (3.39583333333333 : 5.26932123264723 : JumpEnd); (3.5 : 5.26932123264723)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Menu/Menus_MenuRecipe" />
+      <nodes>
+        <classShapeMoniker Id="362b6879-5eda-404e-ae71-a6f732e551c0" />
+        <classShapeMoniker Id="022d5d32-501a-4c53-bc70-7a339c1e4dd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.0630759230769); (3.3125 : 13.5005759230769); (3.3125 : 4.91590861632362); (3.5 : 4.91590861632362)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/Recipe/Recipe_MenuRecipe" />
+      <nodes>
+        <classShapeMoniker Id="d4e605fe-1de4-4c0a-ab39-0e23325d7324" />
+        <classShapeMoniker Id="022d5d32-501a-4c53-bc70-7a339c1e4dd9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 17.625); (2.125 : 16.3478011067708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MenuPlannerContext/RecipeSourceType/RecipeSourceType_Recipe" />
+      <nodes>
+        <classShapeMoniker Id="e9c9e7bd-9347-43ae-9ecc-573bc93e5c55" />
+        <classShapeMoniker Id="d4e605fe-1de4-4c0a-ab39-0e23325d7324" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

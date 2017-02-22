@@ -55,6 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\ClientsTableViewModel.cs" />
+    <Compile Include="ViewModels\ClientViewModel.cs" />
+    <Compile Include="Views\Client\ClientsTableView.xaml.cs">
+      <DependentUpon>ClientsTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Client\ClientView.xaml.cs">
+      <DependentUpon>ClientView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +75,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Client\ClientsTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Client\ClientView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -95,6 +111,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MenuPlanner.Common\MenuPlanner.Common.csproj">
+      <Project>{b9befcc5-1ea8-49b9-ba82-6c8a530739c8}</Project>
+      <Name>MenuPlanner.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MenuPlanner.Repository\MenuPlanner.Repository.csproj">
+      <Project>{785c8eb0-c96f-4e26-bf49-64a2d75a4978}</Project>
+      <Name>MenuPlanner.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

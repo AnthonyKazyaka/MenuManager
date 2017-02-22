@@ -40,22 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
-    <Compile Include="Event.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="ContactInformation.cs" />
-    <Compile Include="EventType.cs" />
-    <Compile Include="Ingredient.cs" />
-    <Compile Include="JobType.cs" />
-    <Compile Include="LocationInformation.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quantity.cs" />
-    <Compile Include="Recipe.cs" />
-    <Compile Include="RecipeSource.cs" />
-    <Compile Include="RecipeSourceType.cs" />
-    <Compile Include="ShoppingLocation.cs" />
     <Compile Include="Units.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
